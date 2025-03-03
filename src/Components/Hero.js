@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImg from "../assests/images/Memoji/Thumbs-up.png";
+import myCV from "../assests/PDF/Ajayi Daniel(CV).pdf";
 
 const Hero = () => {
   return (
@@ -29,7 +30,9 @@ const Hero = () => {
             </div>
 
             <div className="CV">
-              <button>Download CV</button>
+              <button>
+                <a href={myCV}>Download CV</a>
+              </button>
             </div>
           </div>
         </div>

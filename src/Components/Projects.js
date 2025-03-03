@@ -6,13 +6,13 @@ import BudgetApp from "../assests/images/Projects/Budget APP.jpg";
 const Projects = React.forwardRef((props, ref) => {
   return (
     <section
-      className="project container"
+      className="container project "
       ref={ref}>
       <div className="Projects-header">
         <h1>Projects</h1>
       </div>
 
-      <div className="main">
+      <div className="project-grid">
         <div className="projects">
           <div className="title">
             <h3>Budget App</h3>
@@ -42,13 +42,13 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="btns">
             <div className="Git-btn">
               <button>
-                <a href="#">Github</a>
+                <a href="https://github.com/Delz-create/Budget">Github</a>
               </button>
             </div>
 
             <div className="Deploy-btn">
               <button>
-                <a href="#">Depoly</a>
+                <a href="https://budget-ten-flame.vercel.app/">Depoly</a>
               </button>
             </div>
           </div>
@@ -80,13 +80,13 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="btns">
             <div className="Git-btn">
               <button>
-                <a href="#">Github</a>
+                <a href="https://github.com/Delz-create/To-do">Github</a>
               </button>
             </div>
 
             <div className="Deploy-btn">
               <button>
-                <a href="#">Depoly</a>
+                <a href="https://to-do-seven-liard.vercel.app/">Depoly</a>
               </button>
             </div>
           </div>
@@ -117,13 +117,17 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="btns">
             <div className="Git-btn">
               <button>
-                <a href="#">Github</a>
+                <a href="https://github.com/Delz-create/Stock-tracker">
+                  Github
+                </a>
               </button>
             </div>
 
             <div className="Deploy-btn">
               <button>
-                <a href="#">Depoly</a>
+                <a href="https://stock-tracker-gilt-eight.vercel.app/">
+                  Depoly
+                </a>
               </button>
             </div>
           </div>

@@ -98,10 +98,8 @@ body {
 
 /* Hero */
 .Hero-section {
-  padding: 0 1rem;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  align-items: start;
 }
 .card {
   background-image: var(--grad1);
@@ -113,6 +111,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .main-img {
   background-color: var(--grey-900);
@@ -166,6 +165,10 @@ span::after {
   content: url(./assests/images/CV-icon.png);
   margin: 0 0 0 0.5rem;
 }
+.btns .CV button a {
+  text-decoration: none;
+  color: var(--blacks);
+}
 
 /* projects */
 .project {
@@ -176,14 +179,14 @@ span::after {
   font-size: 2rem;
   margin: 0 0 1.5rem 0;
 }
-.main {
+
+.project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   align-items: center;
-  /* margin: 0 auto; */
 }
-.main .projects {
+.project-grid .projects {
   margin: 0 0 1.5rem 0;
   padding: 0.5rem;
   border-radius: 1rem;
@@ -287,7 +290,7 @@ span::after {
 /* About */
 .about {
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 4.5rem auto;
 }
 .About-header {
   font-size: 2rem;
