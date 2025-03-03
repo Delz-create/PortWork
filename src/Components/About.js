@@ -62,7 +62,7 @@ const About = React.forwardRef((props, ref) => {
       </div>
 
       <div className="About-body">
-        <div className="main">
+        <div className="About-main">
           <div className="About-imgs">
             <div className="about-img">
               <img
@@ -82,7 +82,7 @@ const About = React.forwardRef((props, ref) => {
 
         <div className="About-skills">
           <div className="About-skills_header">
-            <h1>Skills</h1>
+            <h2>Skills</h2>
           </div>
 
           <div className="skills">

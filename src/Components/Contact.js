@@ -42,7 +42,7 @@ const Contact = React.forwardRef((props, ref) => {
       className="contact container"
       ref={ref}>
       <div className="contact-header">
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
         <p>Get in touch</p>
       </div>
 

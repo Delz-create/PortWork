@@ -110,13 +110,14 @@ body {
   border-radius: 1.5rem;
   padding: 2rem;
   text-align: center;
-  height: 100%;
+  height: 35rem;
 }
 .card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 .main-img {
   background-color: var(--grey-900);
@@ -184,7 +185,9 @@ span::after {
   font-size: 2rem;
   margin: 0 0 1.5rem 0;
 }
-
+.projects {
+  margin: 0 auto;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -245,7 +248,9 @@ span::after {
   background-color: var(--blacks);
   padding: 0.5rem 0.2rem;
   position: relative;
+  border: 3px solid var(--whites);
   border-radius: 0.5rem;
+  box-shadow: 2px 3px 5px 1px var(--blacks);
   margin: 0 0 1rem 0;
 }
 .projects-img img {
@@ -255,7 +260,7 @@ span::after {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 0.5rem;
-  box-shadow: 20px 4px 5px 4px #111;
+  box-shadow: 10px 4px 3px 2px #111;
 }
 .To-do {
   height: 100px;
@@ -335,6 +340,12 @@ span::after {
 .About-skills_header h1 {
   font-size: 2rem;
   margin: 1rem 0 0.7rem 0;
+}
+.About-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
 }
 .skill {
   display: grid;
@@ -437,7 +448,7 @@ textarea:focus {
   .about {
     width: 35rem;
   }
-  .About-body .main {
+  .About-body .About-main {
     display: flex;
     justify-content: center;
     align-items: end;
@@ -451,9 +462,6 @@ textarea:focus {
   }
   .contact-container {
     display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
   }
   .contact-information {
     margin: 2.5rem 0 0 0;
