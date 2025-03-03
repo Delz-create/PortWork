@@ -26,7 +26,9 @@ function Navbar({ scrollToSection }) {
         <div className="nav-section-body">
           <div
             className="menu-icon"
-            onClick={toggleMenu}>
+            onClick={toggleMenu}
+            aria-expanded={isOpen}
+            aria-label="Toggle menu">
             {isOpen ? <FaTimes /> : <HiMenuAlt3 />}
           </div>
 

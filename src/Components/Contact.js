@@ -81,7 +81,7 @@ const Contact = React.forwardRef((props, ref) => {
                   <input
                     onChange={handleInputChange}
                     type="text"
-                    name="Name"
+                    name="name"
                     className="contact-input"
                   />
                 </div>

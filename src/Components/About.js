@@ -87,11 +87,9 @@ const About = React.forwardRef((props, ref) => {
 
           <div className="skills">
             <ul>
-              <div
-                className="skill"
-                key={skills.id}>
+              <div className="skill">
                 {skills.map((skill) => (
-                  <li>
+                  <li key={skills.id}>
                     <div className="skill-icon">{skill.icon}</div>
                     <div className="react-des">
                       <p>{skill.title}</p>

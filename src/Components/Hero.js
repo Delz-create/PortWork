@@ -26,12 +26,17 @@ const Hero = () => {
 
           <div className="btns">
             <div className="hero-contact">
-              <button>Contact</button>
+              <button aria-label="Contact Me">Contact</button>
             </div>
 
             <div className="CV">
               <button>
-                <a href={myCV}>Download CV</a>
+                <a
+                  href={myCV}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Download CV
+                </a>
               </button>
             </div>
           </div>
