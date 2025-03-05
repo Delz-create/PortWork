@@ -1,6 +1,6 @@
 import React from "react";
 import HeroImg from "../assests/images/Memoji/Thumbs-up.png";
-import myCV from "../assests/PDF/Ajayi Daniel(CV).pdf";
+import myCV from "../assests/Ajayi Daniel(CV).pdf";
 
 const Hero = () => {
   return (
