@@ -104,21 +104,24 @@ body {
 .Hero-section {
   justify-content: center;
   align-items: start;
+  margin: 0 0 4.5rem 0;
 }
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: var(--grad1);
   border-radius: 1.5rem;
   padding: 2rem;
   text-align: center;
-  margin: 1.5rem 0 4.5rem 0;
   min-height: 80vh;
+  padding: auto 0 auto 0;
 }
 .card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem 0 0 0;
 }
 .main-img {
   background-color: var(--grey-900);
@@ -186,9 +189,7 @@ span::after {
   font-size: 2rem;
   margin: 0 0 1.5rem 0;
 }
-.projects {
-  margin: 0 auto;
-}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,6 +200,7 @@ span::after {
   margin: 0 0 1.5rem 0;
   padding: 0.5rem;
   border-radius: 1rem;
+  margin: 0 auto;
 }
 .title h3 {
   margin: 0 0 0.3rem 0;
@@ -383,6 +385,7 @@ span::after {
   justify-content: start;
   align-items: center;
   gap: 20px;
+  margin: 0 0 1.5rem 0;
 }
 .contact-icon {
   font-size: 1.7rem;
@@ -395,6 +398,7 @@ span::after {
   border: 1px solid var(--yellow);
   border-radius: 0.3rem;
   padding: 1rem;
+  min-width: 20rem;
 }
 input,
 textarea {
