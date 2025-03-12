@@ -2,6 +2,7 @@ import React from "react";
 import StockTracker from "../assests/images/Projects/Stock tracker.jpg";
 import ToDoList from "../assests/images/Projects/To-do list.jpg";
 import BudgetApp from "../assests/images/Projects/Budget APP.jpg";
+import Kesti from "../assests/images/Projects/Kesti landing page.jpg";
 
 const Projects = React.forwardRef((props, ref) => {
   return (
@@ -42,15 +43,13 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="btns">
             <div className="Git-btn">
               <button>
-                <a href="https://github.com/Delz-create/Budget" target="_blank"
-                  rel="noopener noreferrer">Github</a>
+                <a href="https://github.com/Delz-create/Budget">Github</a>
               </button>
             </div>
 
             <div className="Deploy-btn">
               <button>
-                <a href="https://budget-ten-flame.vercel.app/" target="_blank"
-                  rel="noopener noreferrer">Depoly</a>
+                <a href="https://budget-ten-flame.vercel.app/">Depoly</a>
               </button>
             </div>
           </div>
@@ -82,15 +81,13 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="btns">
             <div className="Git-btn">
               <button>
-                <a href="https://github.com/Delz-create/To-do" target="_blank"
-                  rel="noopener noreferrer">Github</a>
+                <a href="https://github.com/Delz-create/To-do">Github</a>
               </button>
             </div>
 
             <div className="Deploy-btn">
               <button>
-                <a href="https://to-do-seven-liard.vercel.app/" target="_blank"
-                  rel="noopener noreferrer">Depoly</a>
+                <a href="https://to-do-seven-liard.vercel.app/">Depoly</a>
               </button>
             </div>
           </div>
@@ -121,8 +118,7 @@ const Projects = React.forwardRef((props, ref) => {
           <div className="btns">
             <div className="Git-btn">
               <button>
-                <a href="https://github.com/Delz-create/Stock-tracker" target="_blank"
-                  rel="noopener noreferrer">
+                <a href="https://github.com/Delz-create/Stock-tracker">
                   Github
                 </a>
               </button>
@@ -130,10 +126,52 @@ const Projects = React.forwardRef((props, ref) => {
 
             <div className="Deploy-btn">
               <button>
-                <a href="https://stock-tracker-gilt-eight.vercel.app/" target="_blank"
-                  rel="noopener noreferrer">
+                <a href="https://stock-tracker-gilt-eight.vercel.app/">
                   Depoly
                 </a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="projects">
+          <div className="title">
+            <h3>Kesti</h3>
+          </div>
+
+          <div className="Features">
+            <div className="grey">
+              <p>State management</p>
+            </div>
+
+            <div className="light-blue">
+              <p>Context API</p>
+            </div>
+
+            <div className="yellow">
+              <p>React Router</p>
+            </div>
+          </div>
+
+          <div className="projects-img">
+            <img
+              src={Kesti}
+              alt="img"
+            />
+          </div>
+
+          <div className="btns">
+            <div className="Git-btn">
+              <button>
+                <a href="https://github.com/Delz-create/Kestitradies-react.git">
+                  Github
+                </a>
+              </button>
+            </div>
+
+            <div className="Deploy-btn">
+              <button>
+                <a href="https://kestitradies-react.vercel.app/">Depoly</a>
               </button>
             </div>
           </div>

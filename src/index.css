@@ -115,7 +115,7 @@ body {
   padding: 2rem;
   text-align: center;
   min-height: 80vh;
-  padding: auto 2rem auto 2rem;
+  padding: auto 0 auto 0;
 }
 .card-content {
   display: flex;
