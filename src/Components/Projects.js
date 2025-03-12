@@ -136,7 +136,7 @@ const Projects = React.forwardRef((props, ref) => {
 
         <div className="projects">
           <div className="title">
-            <h3>Kesti</h3>
+            <h3>Kesti Store</h3>
           </div>
 
           <div className="Features">
