@@ -123,13 +123,15 @@ const Projects = React.forwardRef((props, ref) => {
               <div className="btns">
                 <div className="Git-btn">
                   <button>
-                    <a href={project.gitHubLink}>Github</a>
+                    <a target="_blank"
+                  rel="noopener noreferrer" href={project.gitHubLink}>Github</a>
                   </button>
                 </div>
 
                 <div className="Deploy-btn">
                   <button>
-                    <a href={project.deployLink}>Demo</a>
+                    <a target="_blank"
+                  rel="noopener noreferrer" href={project.deployLink}>Demo</a>
                   </button>
                 </div>
               </div>
