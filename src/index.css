@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html {
@@ -184,23 +185,40 @@ span::after {
 .project {
   flex-direction: column;
   margin: 0 auto 4.5rem auto;
+  min-height: 75vh;
 }
 .Projects-header {
   font-size: 2rem;
   margin: 0 0 1.5rem 0;
 }
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.project-carousel {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 1.5rem;
 }
-.project-grid .projects {
-  margin: 0 0 1.5rem 0;
-  padding: 0.5rem;
-  border-radius: 1rem;
+.left,
+.right {
+  font-size: 2.5rem;
+  color: var(--yellow);
+  cursor: pointer;
+}
+.project-grid {
+  position: relative;
+  width: 100%;
+  overflow: visible;
   margin: 0 auto;
+}
+.projects {
+  position: absolute;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1rem;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.projects.active {
+  opacity: 1;
 }
 .title h3 {
   margin: 0 0 0.3rem 0;
@@ -210,44 +228,13 @@ span::after {
   gap: 7px;
   margin: 0 0 0.5rem 0;
 }
-.Red {
-  background-color: var(--rose);
-  padding: 0.3rem;
-  color: var(--whites);
-  border-radius: 1rem;
-  font-size: 0.8rem;
-}
-.yellow {
-  background-color: var(--yellow);
-  padding: 0.3rem;
-  color: var(--whites);
-  border-radius: 1rem;
-  font-size: 0.8rem;
-}
-.blue {
-  background-color: var(--light-blue);
-  padding: 0.3rem;
-  color: var(--whites);
-  border-radius: 1rem;
-  font-size: 0.8rem;
-}
-.light-blue {
-  background-color: var(--emerald);
-  padding: 0.3rem;
-  color: var(--whites);
-  border-radius: 1rem;
-  font-size: 0.8rem;
-}
-.grey {
-  background-color: var(--gray6_text-apoio);
-  padding: 0.3rem;
-  color: var(--blacks);
-  border-radius: 1rem;
-  font-size: 0.8rem;
+.Features p {
+  font-size: 0.7rem;
+  font-weight: 800;
 }
 .projects-img {
-  width: 250px;
-  height: 150px;
+  width: 100%;
+  height: 250px;
   background-color: var(--blacks);
   padding: 0.5rem 0.2rem;
   position: relative;
@@ -257,7 +244,8 @@ span::after {
   margin: 0 0 1rem 0;
 }
 .projects-img img {
-  width: 200px;
+  width: 80%;
+  object-fit: contain;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -265,14 +253,11 @@ span::after {
   border-radius: 0.5rem;
   box-shadow: 10px 4px 3px 2px #111;
 }
-.To-do {
-  height: 100px;
-}
 .btns {
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  gap: 5px;
+  gap: 35px;
 }
 .Git-btn button,
 .Deploy-btn button {
@@ -280,7 +265,6 @@ span::after {
   border: none;
   font-weight: 700;
   position: relative;
-  margin: 0 1rem;
   cursor: pointer;
 }
 .Git-btn button::after {
