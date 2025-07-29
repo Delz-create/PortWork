@@ -277,7 +277,7 @@ span::after {
   content: url(./assests/images/globe.png);
   margin: 0 0 0 0.3rem;
   position: absolute;
-  bottom: -30%;
+  bottom: -29%;
 }
 .projects .btns button a {
   text-decoration: none;

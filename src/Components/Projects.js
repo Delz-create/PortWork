@@ -78,7 +78,7 @@ const Projects = React.forwardRef((props, ref) => {
     if (!isPaused) {
       intervalRef.current = setInterval(() => {
         nextProject();
-      }, 5000);
+      }, 5001);
     }
     return () => clearInterval(intervalRef.current);
   }, [isPaused]);
