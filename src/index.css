@@ -202,7 +202,7 @@ span::after {
   color: var(--yellow);
   cursor: pointer;
 }
-.project-grid {
+/* .project-grid {
   position: relative;
   width: 100%;
   overflow: visible;
@@ -219,7 +219,7 @@ span::after {
 }
 .projects.active {
   opacity: 1;
-}
+} */
 .title h3 {
   margin: 0 0 0.3rem 0;
 }
@@ -296,10 +296,12 @@ span::after {
 }
 
 .projects {
-  flex: 0 0 100%;
+  min-width: 100%;
+  flex-shrink: 0;
   padding: 1rem;
   box-sizing: border-box;
 }
+
 
 /* About */
 .about {
@@ -490,3 +492,4 @@ textarea:focus {
     width: 40rem;
   }
 }
+
