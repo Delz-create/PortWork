@@ -15,9 +15,7 @@ const Projects = React.forwardRef((props, ref) => {
     {
       id: 1,
       title: "Budget App",
-      Feature_1: "React",
-      Feature_2: "Context API",
-      Feature_3: "Chart.JS",
+      features: ["React", "Context API", "Chart.js"],
       img: BudgetApp,
       gitHubLink: "https://github.com/Delz-create/Budget",
       deployLink: "https://budget-ten-flame.vercel.app/",
@@ -25,9 +23,7 @@ const Projects = React.forwardRef((props, ref) => {
     {
       id: 2,
       title: "Kesti",
-      Feature_1: "State management",
-      Feature_2: "Context API",
-      Feature_3: "React Router",
+      features: ["State management", "Context API", "React Router"],
       img: Kesti,
       gitHubLink: "https://github.com/Delz-create/Kestitradies-react.git",
       deployLink: "https://kestitradies-react.vercel.app/",
@@ -35,8 +31,7 @@ const Projects = React.forwardRef((props, ref) => {
     {
       id: 3,
       title: "To-do List",
-      Feature_1: "React",
-      Feature_2: "State management",
+      features: ["React", "State management"],
       img: ToDoList,
       gitHubLink: "https://github.com/Delz-create/To-do",
       deployLink: "https://to-do-seven-liard.vercel.app/",
@@ -44,8 +39,7 @@ const Projects = React.forwardRef((props, ref) => {
     {
       id: 4,
       title: "Stock Tracker",
-      Feature_1: "React",
-      Feature_2: "Fetch API",
+      features: ["React", "Fetch API"],
       img: StockTracker,
       gitHubLink: "https://github.com/Delz-create/Stock-tracker",
       deployLink: "https://stock-tracker-gilt-eight.vercel.app/",
@@ -53,9 +47,7 @@ const Projects = React.forwardRef((props, ref) => {
     {
       id: 5,
       title: "Home inspo",
-      Feature_1: "TS",
-      Feature_2: "Fetch API",
-      Feature_3: "Tailwind",
+      features: ["TS", "Fetch API"],
       img: HomeInspo,
       gitHubLink: "https://github.com/Delz-create/breezy-admin-blog.git",
       deployLink: "https://breezy-admin-blog.vercel.app/",
@@ -75,13 +67,16 @@ const Projects = React.forwardRef((props, ref) => {
   };
 
   useEffect(() => {
-    if (!isPaused) {
-      intervalRef.current = setInterval(() => {
-        nextProject();
-      }, 5001);
-    }
-    return () => clearInterval(intervalRef.current);
-  }, [isPaused]);
+  if (isPaused) return;
+
+  intervalRef.current = setInterval(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  }, 5000);
+
+  return () => clearInterval(intervalRef.current);
+}, [isPaused, projects.length]);
 
   return (
     <section
@@ -94,7 +89,10 @@ const Projects = React.forwardRef((props, ref) => {
       <div
         className="project-carousel"
         onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}>
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}>
+                                  
         <div
           className="left"
           onClick={prevProject}>
@@ -113,11 +111,12 @@ const Projects = React.forwardRef((props, ref) => {
                   <h3>{project.title}</h3>
                 </div>
 
-                <div className="Features">
-                  {project.Feature_1 && <p>{project.Feature_1}</p>}
-                  {project.Feature_2 && <p>{project.Feature_2}</p>}
-                  {project.Feature_3 && <p>{project.Feature_3}</p>}
-                </div>
+                
+                    <div className="Features">
+  {project.features.map((feature) => (
+    <p key={feature}>{feature}</p>
+  ))}
+</div>
 
                 <div className="projects-img">
                   <img
@@ -128,25 +127,11 @@ const Projects = React.forwardRef((props, ref) => {
 
                 <div className="btns">
                   <div className="Git-btn">
-                    <button>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.gitHubLink}>
-                        Github
-                      </a>
-                    </button>
+                    <button onClick={() => window.open(project.gitHubLink, "_blank")}>Github</button>
                   </div>
 
                   <div className="Deploy-btn">
-                    <button>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.deployLink}>
-                        Demo
-                      </a>
-                    </button>
+                    <button onClick={() => window.open(project.deployLink, "_blank")}>Demo</button> 
                   </div>
                 </div>
               </div>
@@ -165,3 +150,4 @@ const Projects = React.forwardRef((props, ref) => {
 });
 
 export default Projects;
+
